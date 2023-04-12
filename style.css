@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     background: #1d1d1d;
 
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,10 +57,15 @@ body {
 .rio-raso p {
     height: 5rem;
 }
-
-.normal { font-size: 55px; }
-.blue { color: #0a0ad8; }
-
+.normal { 
+    font-size: 55px; 
+}
+#aumentar { 
+    font-size: 90px; 
+}
+.blue { 
+    color: #0a0ad8; 
+}
 .transparente {
     background-image: linear-gradient(to right, #b8b8b8, #929292);
     -webkit-text-fill-color: transparent;
@@ -67,36 +73,11 @@ body {
     -webkit-text-stroke: 1px black;
     margin-bottom: -3.9rem;
 }
-#aumentar { 
-    font-size: 90px; 
-}
-#aumentar.active {
-    animation: aumentar 5.65s forwards ease-in;
-}
 .grande { 
     font-size: 70px; 
     margin-top: -2rem;
 }
-#diminuir.active {
-    animation: diminuir 5.65s forwards ease-in;
-}
 
-
-/* ================== animacao ================== */
-@keyframes diminuir {
-    to {
-        font-size: 0px;
-    }
-}
-
-@keyframes aumentar {
-    from {
-        font-size: 0px;
-    }
-    to {
-        font-size: 90px;
-    }
-}
 
 
 /* -------------------------------------- manso rio -------------------------------------- */
@@ -111,7 +92,7 @@ body {
     font-weight: 500;
     font-size: 29px;
 }
-.container-1 {
+.canoa {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,16 +137,16 @@ textPath {
     flex-direction: column;
     text-align: center;
 }
-.text-fall {
-    opacity: 0;
-    animation: 3s forwards;
-}
 
-@keyframes fall {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+
+.dicas {
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+}
+.dicas p {
+    color: #929292;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: small;
 }

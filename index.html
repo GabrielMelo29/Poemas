@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poemas Animados</title>
 
+    <!-- link favicon -->
+    <link rel="shortcut icon" href="faviconPoemas-removebg-preview.ico" type="image/x-icon">
+
     <!-- link css -->
     <link rel="stylesheet" href="style.css">
 
@@ -15,70 +18,74 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="container">
-        <div class="slide-poema scrollbar">
-            <div class="poema">
-                <div class="rio-raso">
-                    <p class="normal">
-                        Eu me 
-                        <span class="blue" id="diminuir">rio raso</span>
-                    </p>
-                    <p class="transparente normal">tu te maresias de</p>
-                    <p class="normal"> <span class="blue" id="aumentar">enchentes</span>,</p>
-                    <p class="normal">e, logo mais, <span class="grande">nós</span></p>
-                    <p class="grande" style="text-align: end;">nos</p>
-                    <p class="grande">preamaremos.</p>
+    <div class="slide-poema scrollbar">
+        <div class="poema">
+            <div class="rio-raso">
+                <p class="normal">
+                    Eu me 
+                    <span class="blue" id="diminuir">rio raso</span>
+                </p>
+                <p class="transparente normal">tu te maresias de</p>
+                <p class="normal"> <span class="blue" id="aumentar">enchentes</span>,</p>
+                <p class="normal">e, logo mais, <span class="grande">nós</span></p>
+                <p class="grande" style="text-align: end;">nos</p>
+                <p class="grande">preamaremos.</p>
 
-                    <div class="modal-poema-1"></div> 
+                <div class="modal-poema-1"></div> 
+            </div>
+            <audio id="rio">
+                <source src="audio/rioRaso.mp3" type="audio/mp3">
+                <source src="audio/rioRaso.mp3" type="audio/mpeg">
+                <p>Infelizmente seu navegador não consegue reproduzir o audio</p>
+            </audio>
+        </div>
+
+        <div class="poema">
+            <div class="manso-rio">
+                <div class="canoa">
+                    <svg class="curve-1" style="height: 50px; width: 409px;">
+                        <path id="curve1" d="M4,48 q200.5 -50 401 0" />
+                        <text>
+                          <textPath xlink:href="#curve1">
+                            Manso rio por entremargens,
+                          </textPath>
+                        </text>
+                    </svg><br>
+                    <svg class="curve-2" style="height: 50px; width: 330px;">
+                        <path id="curve2" d="M1,22 q174 50 328 0" />
+                        <text>
+                          <textPath xlink:href="#curve2">
+                            leva-e-traz minha canoa
+                          </textPath>
+                        </text>
+                    </svg>
                 </div>
-                <audio id="rio" preload="auto">
-                    <source src="audio/rioRaso.mp3" type="audio/mp3">
-                    <source src="audio/rioRaso.mp3" type="audio/mpeg">
+
+                <div class="fall-animation">
+                    <span class="text1">nas</span>
+                    <span class="text2">viagens</span>
+                    <span class="text3">que</span>
+                    <span class="text4">nem</span>
+                    <span class="text5">faço.</span>
+                </div>
+
+                <div class="modal-poema-2"></div> 
+
+                <audio id="audio-2">
+                    <source src="audio/bolha.mp3" type="audio/mp3">
+                    <source src="audio/bolha.mp3" type="audio/mpeg">
                     <p>Infelizmente seu navegador não consegue reproduzir o audio</p>
                 </audio>
             </div>
-
-            <div class="poema">
-                <div class="manso-rio">
-                    <div class="container-1">
-                        <svg class="curve-1" style="height: 50px; width: 409px;">
-                            <path id="curve1" d="M4,48 q200.5 -50 401 0" />
-                            <text>
-                              <textPath xlink:href="#curve1">
-                                Manso rio por entremargens,
-                              </textPath>
-                            </text>
-                        </svg><br>
-                        <svg class="curve-2" style="height: 50px; width: 330px;">
-                            <path id="curve2" d="M1,22 q174 50 328 0" />
-                            <text>
-                              <textPath xlink:href="#curve2">
-                                leva-e-traz minha canoa
-                              </textPath>
-                            </text>
-                        </svg>
-                    </div>
-
-                    <div id="container-2" class="fall-animation">
-                        <span class="text-fall">nas</span>
-                        <span class="text-fall">viagens</span>
-                        <span class="text-fall">que</span>
-                        <span class="text-fall">nem</span>
-                        <span class="text-fall">faço.</span>
-                    </div>
-
-                    <div class="modal-poema-2"></div> 
-
-                    <audio id="audio-2" preload="auto">
-                        <source src="audio/bolha.mp3" type="audio/mp3">
-                        <source src="audio/bolha.mp3" type="audio/mpeg">
-                        <p>Infelizmente seu navegador não consegue reproduzir o audio</p>
-                    </audio>
-                </div>
-            </div>
         </div>
-    </main>
+    </div>
 
+    <div class="dicas">
+        <p>Play: colocar o mouse dentro na caixa do peoma.</p>
+        <p>Restart: tirar o mouse e colocar novamente.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

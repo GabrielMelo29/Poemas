@@ -34,14 +34,14 @@ body {
     flex: 0 0 100%;
     scroll-snap-align: start;
 }
-
-
-/* -------------------------------------- rio raso -------------------------------------- */
-.modal-poema-1, .modal-poema-2 {
+.modal-poema-1, .modal-poema-2, .modal-poema-3 {
     position: absolute;
     width: 100%;
     height: 100%;
 }
+
+
+/* -------------------------------------- rio raso -------------------------------------- */
 
 .rio-raso {
     position: relative;
@@ -139,6 +139,39 @@ textPath {
 }
 
 
+
+/* -------------------------------------- vento mare -------------------------------------- */
+.vento-mare {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 270px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 29px;
+}
+.svgPath-1 {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    font-family: 'DM Sans', sans-serif;
+}
+.svgPath-2 {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+#voltoMais {
+    color: #050505;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+
 .dicas {
     position: absolute;
     left: 2rem;
@@ -150,3 +183,4 @@ textPath {
     font-weight: 600;
     font-size: small;
 }
+

@@ -15,10 +15,10 @@
     <!-- link google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="slide-poema scrollbar">
+    <main class="slide-poema scrollbar">
         <div class="poema">
             <div class="rio-raso">
                 <p class="normal">
@@ -77,8 +77,46 @@
                     <p>Infelizmente seu navegador não consegue reproduzir o audio</p>
                 </audio>
             </div>
+        </div> 
+
+        <div class="poema">
+            <div class="vento-mare">
+                <svg class="svgPath-1" width="390" height="55" viewBox="0 0 390 55">
+                    <path id="path-vento" fill="none" stroke="none" stroke-width="1" d="M8,55 C8,55 91,21 200,41 C210,41 285,63 390,27"></path>
+                    <text width="500">
+                        <textPath id="textPatVento" xlink:href="#path-vento" startoffset="0%">
+                            <tspan font-size="56">O</tspan>
+                            <tspan font-size="51">vento</tspan>
+                            <tspan font-size="44">me</tspan>
+                            <tspan font-size="36">leva</tspan>
+                        </textPath>
+                    </text>
+                </svg>
+                
+                <svg class="svgPath-2" width="370" height="59" viewBox="0 0 370 59">
+                    <path id="path-mare" fill="none" stroke="none" stroke-width="1" d="M0,40 C0,40 96,85 207,30 C238,38 299,66 370,42"></path>
+                    <text width="500">
+                        <textPath id="textPathMare" xlink:href="#path-mare" startoffset="0%">
+                            <tspan font-size="36">A</tspan>
+                            <tspan font-size="44">maré</tspan>
+                            <tspan font-size="53">me</tspan>
+                            <tspan font-size="59">traz</tspan>
+                        </textPath>
+                    </text>
+                </svg>
+                
+                <p id="voltoMais">Qualquer dia desse não volto mais</p>
+
+                <div class="modal-poema-3"></div> 
+
+                <audio id="audio-3">
+                    <source src="src/audio/ventomare.mp3" type="audio/mp3">
+                    <source src="src/audio/ventomare.mp3" type="audio/mpeg">
+                    <p>Infelizmente seu navegador não consegue reproduzir o audio</p>
+                </audio>
+            </div>
         </div>
-    </div>
+    </main>
 
     <div class="dicas">
         <p>Play: colocar o mouse dentro na caixa do poema.</p>

@@ -41,7 +41,7 @@ animacao1.addEventListener("mouseout", () => {
 
 
 
-// -------------------------------- iniciar animacao manso rio
+// // -------------------------------- iniciar animacao manso rio
 
 const animacao2 = document.querySelector(".modal-poema-2");
 const audio2 = document.getElementById("audio-2");
@@ -106,3 +106,38 @@ animacao2.addEventListener("mouseout", () => {
     audio2.load();
 
 });
+
+
+const animacao3 = document.querySelector(".modal-poema-3");
+const textPathMare = document.getElementById('textPathMare');
+const textPatVento = document.getElementById('textPatVento');
+const voltoMais = document.getElementById('voltoMais');
+const audio3 = document.getElementById("audio-3");
+
+
+function animacaoVentoMare() {
+  anime({
+    targets: textPatVento,
+    startOffset: [- 100 + '%', '0%'],
+    duration: 4000, 
+    easing: 'linear',
+  });
+  audio3.play()
+  anime({
+    targets: textPathMare,
+    startOffset: [100 + '%', '0%'],
+    duration: 4000, 
+    delay: 4000,
+    easing: 'linear',
+  });
+  anime({
+    targets: voltoMais,
+    opacity: [1, 0],
+    duration: 6000, 
+    delay: 7500,
+    easing: 'linear',
+    complete: () => voltoMais.style.opacity = 1
+  });
+}
+
+animacao3.addEventListener("mouseover", animacaoVentoMare)
